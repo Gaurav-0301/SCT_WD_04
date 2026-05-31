@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo-Task | To-Do Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Neo-Task</h1>
+            <p>Organize your day, beautifully.</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group text-input-group">
+                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off">
+            </div>
+            <div class="datetime-group">
+                <input type="date" id="date-input">
+                <input type="time" id="time-input">
+                <button id="add-btn" class="add-btn"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <span class="task-count" id="task-count">0 tasks</span>
+        </div>
+
+        <ul class="task-list" id="task-list">
+            <!-- Tasks will be injected here via JavaScript -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
