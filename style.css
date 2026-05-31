@@ -19,17 +19,17 @@ body {
     display: flex;
     background: #ffffff;
     width: 100%;
-    max-width: 900px;
+    max-width: 950px; /* Slightly wider overall container */
     min-height: 500px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid #e5e7eb;
-    overflow: hidden; /* Keeps corners rounded */
+    overflow: hidden; 
 }
 
 /* --- LEFT PANEL --- */
 .left-panel {
-    width: 320px;
+    width: 350px; /* Increased width so inputs have more room */
     background: #f9fafb;
     padding: 30px;
     border-right: 1px solid #e5e7eb;
@@ -82,6 +82,13 @@ input:focus {
 .scheduling-row {
     display: flex;
     gap: 10px;
+    width: 100%;
+}
+
+/* FIX: Forces the date and time inputs to share space without overflowing */
+.scheduling-row input {
+    flex: 1;
+    min-width: 0; 
 }
 
 .add-btn {
