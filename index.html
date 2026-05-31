@@ -20,20 +20,59 @@
             <div class="input-group text-input-group">
                 <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off">
             </div>
-            <div class="datetime-group">
-                <input type="date" id="date-input">
-                <input type="time" id="time-input">
-                <button id="add-btn" class="add-btn"><i class="fas fa-plus"></i></button>
+            <div class="datetime-group"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora | Dashboard To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <!-- LEFT PANEL: Functional Section -->
+        <aside class="left-panel">
+            <header class="app-header">
+                <h1>Aurora<span>Task</span></h1>
+                <p>Command your day.</p>
+            </header>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label>Task Description</label>
+                    <input type="text" id="task-input" placeholder="e.g., Deploy to Vercel..." autocomplete="off">
+                </div>
+                
+                <div class="input-group">
+                    <label>Schedule (Optional)</label>
+                    <div class="datetime-group">
+                        <input type="date" id="date-input">
+                        <input type="time" id="time-input">
+                    </div>
+                </div>
+
+                <button id="add-btn" class="add-btn">
+                    <i class="fas fa-plus"></i> Initialize Task
+                </button>
             </div>
-        </div>
+        </aside>
 
-        <div class="filter-section">
-            <span class="task-count" id="task-count">0 tasks</span>
-        </div>
+        <!-- RIGHT PANEL: Task Section -->
+        <main class="right-panel">
+            <div class="filter-section">
+                <h2>Active Protocol</h2>
+                <span class="task-count" id="task-count">0 tasks</span>
+            </div>
 
-        <ul class="task-list" id="task-list">
-            <!-- Tasks will be injected here via JavaScript -->
-        </ul>
+            <ul class="task-list" id="task-list">
+                <!-- Tasks will inject here -->
+            </ul>
+        </main>
+
     </div>
 
     <script src="script.js"></script>
