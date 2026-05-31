@@ -3,75 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo-Task | To-Do Manager</title>
+    <title>Simple Task Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for clean icons -->
+    <!-- FontAwesome for standard icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Neo-Task</h1>
-            <p>Organize your day, beautifully.</p>
-        </header>
-
-        <div class="input-section">
-            <div class="input-group text-input-group">
-                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off">
-            </div>
-            <div class="datetime-group"><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurora | Dashboard To-Do</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for clean icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-    <div class="dashboard-container">
+    <div class="dashboard-wrapper">
         
-        <!-- LEFT PANEL: Functional Section -->
-        <aside class="left-panel">
-            <header class="app-header">
-                <h1>Aurora<span>Task</span></h1>
-                <p>Command your day.</p>
+        <!-- LEFT COLUMN: Inputs -->
+        <div class="left-panel">
+            <header>
+                <h1>My Tasks</h1>
+                <p>Add and schedule new items</p>
             </header>
 
-            <div class="input-section">
-                <div class="input-group">
-                    <label>Task Description</label>
-                    <input type="text" id="task-input" placeholder="e.g., Deploy to Vercel..." autocomplete="off">
-                </div>
+            <div class="input-box">
+                <label>Task Description</label>
+                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off">
                 
-                <div class="input-group">
-                    <label>Schedule (Optional)</label>
-                    <div class="datetime-group">
-                        <input type="date" id="date-input">
-                        <input type="time" id="time-input">
-                    </div>
+                <label>Date & Time</label>
+                <div class="scheduling-row">
+                    <input type="date" id="date-input" title="Date">
+                    <input type="time" id="time-input" title="Time">
                 </div>
 
-                <button id="add-btn" class="add-btn">
-                    <i class="fas fa-plus"></i> Initialize Task
-                </button>
+                <button id="add-btn" class="add-btn">Add Task</button>
             </div>
-        </aside>
+        </div>
 
-        <!-- RIGHT PANEL: Task Section -->
-        <main class="right-panel">
-            <div class="filter-section">
-                <h2>Active Protocol</h2>
-                <span class="task-count" id="task-count">0 tasks</span>
+        <!-- RIGHT COLUMN: Task List -->
+        <div class="right-panel">
+            <div class="list-header">
+                <h2>Current Tasks</h2>
+                <span id="task-count" class="badge">0 tasks remaining</span>
             </div>
 
-            <ul class="task-list" id="task-list">
-                <!-- Tasks will inject here -->
+            <ul id="task-list" class="task-list">
+                <!-- Tasks will appear here -->
             </ul>
-        </main>
+        </div>
 
     </div>
 
